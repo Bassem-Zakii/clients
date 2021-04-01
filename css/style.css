@@ -1,0 +1,123 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  outline: none;
+}
+
+.g-container {
+  width: 100%;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  padding-left: 15px !important;
+  padding-right: 15px !important;
+}
+
+@media (min-width: 576px) {
+  .g-container {
+    max-width: 540px;
+  }
+}
+
+@media (min-width: 768px) {
+  .g-container {
+    max-width: 720px;
+  }
+}
+
+@media (min-width: 992px) {
+  .g-container {
+    max-width: 960px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .g-container {
+    max-width: 1140px;
+  }
+}
+
+@media (min-width: 1400px) {
+  .g-container {
+    max-width: 1320px;
+  }
+}
+
+.g-upper {
+  text-transform: uppercase;
+}
+
+ul {
+  list-style: none;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+.client {
+  background-color: #d7c6e8;
+  height: 100%;
+  color: #fff;
+  padding: 40px 0;
+}
+
+.client .g-container {
+  text-align: center;
+}
+
+.client .g-container .save-img {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.client .g-container .save-img img {
+  width: 100%;
+  height: auto;
+}
+
+.client .g-container p {
+  font-size: 1.6rem;
+}
+
+.client .g-container p span {
+  display: block;
+}
+
+.client .g-container ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-top: 40px;
+}
+
+.client .g-container ul li {
+  display: inline-block;
+  margin: 10px;
+}
+
+.client .g-container ul li p {
+  font-size: 3rem;
+}
+
+.client .g-container h3 {
+  font-size: 2.8rem;
+  font-weight: 400;
+  margin: 20px 0;
+}
+
+@media (max-width: 768px) {
+  .client .g-container ul li p {
+    font-size: 2rem;
+  }
+}
+/*# sourceMappingURL=style.css.map */
