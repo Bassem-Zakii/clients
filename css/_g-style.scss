@@ -43,12 +43,23 @@
   }
 }
 
-.g-upper {
-  text-transform: uppercase;
-}
+// .g-upper {
+//   text-transform: uppercase;
+// }
 
 ul {
   list-style: none;
+  padding: 0;
+}
+
+// img {
+//   width: 100%;
+//   height: auto;
+// }
+
+button {
+  cursor: pointer;
+  border: 0;
 }
 
 // end own resat system

@@ -2,53 +2,180 @@
 
 body {
   font-family: "Poppins", sans-serif;
+  height: 9000px;
 }
 
-.client {
-  background-color: #d7c6e8;
-  height: 100%;
-  color: #fff;
-  padding: 40px 0;
-  .g-container {
-    text-align: center;
-    .save-img {
-      max-width: 500px;
-      margin: 0 auto;
-      img {
-        width: 100%;
-        height: auto;
-      }
-    }
-    p {
-      font-size: 1.6rem;
-      span {
-        display: block;
-      }
-    }
-    ul {
+header {
+  min-height: 100vh;
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+  .logo-menu {
+    box-shadow: 0 5px 5px -8px #000;
+    position: relative;
+    .g-container {
       display: flex;
-      justify-content: center;
       align-items: center;
-      flex-wrap: wrap;
-      margin-top: 40px;
-      li {
-        display: inline-block;
-        margin: 10px;
-        p {
-          font-size: 3rem;
+      justify-content: space-between;
+      padding: 5px 0;
+      .logo {
+        a {
+          font-size: 1.4rem;
+          font-weight: 700;
+          color: #000;
+        }
+      }
+      nav {
+        display: flex;
+        ul {
+          display: flex;
+          align-items: center;
+          li {
+            margin: 0 5px;
+            a {
+              color: #000;
+              font-size: 1rem;
+              display: block;
+            }
+            &.active a {
+              text-decoration: underline;
+            }
+          }
+        }
+        .nav-btn {
+          display: none;
+        }
+      }
+      @media (max-width: 768px) {
+        nav {
+          .nav-btn {
+            display: flex;
+            background-color: #fff;
+            border: 0;
+            outline: none;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-end;
+            cursor: pointer;
+            padding: 5px;
+            span {
+              display: block;
+              background-color: #000;
+              width: 24px;
+              height: 3px;
+              margin: 3px 0;
+              border-radius: 10px;
+              transition: all 0.3s ease-in-out;
+              &:nth-child(2) {
+                width: 18px;
+                transition: all 0.2s ease-in-out;
+              }
+            }
+          }
+          ul {
+            position: absolute;
+            top: 47px;
+            height: calc(100vh - 47px);
+            flex-direction: column;
+            background-color: #fff;
+            left: -100%;
+            align-items: normal;
+            min-width: 300px;
+            transition: all 0.3s ease-in-out;
+            &.active {
+              left: 0;
+            }
+            li {
+              margin: 0;
+              a {
+                padding: 8px 14px;
+              }
+              &.active a {
+                background-color: #000;
+                color: #fff;
+                text-decoration: none;
+              }
+            }
+          }
         }
       }
     }
-    h3 {
-      font-size: 2.8rem;
-      font-weight: 400;
-      margin: 20px 0;
+  }
+  .header-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 47px);
+    background-color: #0ff;
+    color: #000;
+  }
+}
+
+main {
+  .marketing {
+    background-color: #ffff80;
+    color: #000;
+    padding: 60px 0;
+    .g-container {
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      div {
+        border: 1px solid #000;
+        margin-bottom: 20px;
+        padding: 20px;
+      }
     }
-    @media (max-width: 768px) {
+  }
+  .question-answer {
+    background-color: #b0ffd8;
+    padding: 60px 0;
+    .g-container {
+      h2 {
+        text-align: center;
+        margin-bottom: 30px;
+      }
       ul {
         li {
-          p {
-            font-size: 2rem;
+          max-width: 600px;
+          margin: 0 auto 10px;
+          .question {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: #fff;
+            padding: 5px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            span {
+              font-size: 1.5rem;
+            }
+          }
+          .answer {
+            border-radius: 5px;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 1.2s ease;
+            background-color: #fff;
+            margin-top: 5px;
+            p {
+              padding: 20px 14px;
+            }
+          }
+          &.active .answer {
+            max-height: 300px;
+            animation: showAnswer 0.9s ease-in-out;
+          }
+          @keyframes showAnswer {
+            from {
+              opacity: 0;
+              transform: translateY(-10px);
+            }
+            to {
+              opacity: 1;
+              transform: translateY(0px);
+            }
           }
         }
       }
