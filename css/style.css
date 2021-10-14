@@ -64,18 +64,26 @@ a {
   color: inherit;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: "Poppins", sans-serif;
 }
 
-header {
-  min-height: 100vh;
+section {
+  scroll-margin-top: 47px;
 }
 
 header .logo-menu {
   -webkit-box-shadow: 0 5px 5px -8px #000;
           box-shadow: 0 5px 5px -8px #000;
-  position: relative;
+  background-color: #fff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
   height: 47px;
 }
 
@@ -201,7 +209,7 @@ header .logo-menu .g-container nav .nav-btn {
             transform: rotate(-45deg);
   }
   header .logo-menu .g-container nav ul {
-    position: absolute;
+    position: fixed;
     top: 47px;
     height: calc(100vh - 47px);
     -webkit-box-orient: vertical;
@@ -216,6 +224,9 @@ header .logo-menu .g-container nav .nav-btn {
     min-width: 300px;
     -webkit-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
+    padding: 10px 0;
+    -webkit-box-shadow: 4px 4px 8px -6px #000;
+            box-shadow: 4px 4px 8px -6px #000;
   }
   header .logo-menu .g-container nav ul.active {
     left: 0;
@@ -248,7 +259,8 @@ header .header-content {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  min-height: calc(100vh - 47px);
+  min-height: 100vh;
+  padding: 47px 0 10px 0;
   background-color: #0ff;
   color: #000;
 }
@@ -392,6 +404,67 @@ main .roller .roller-content .random button {
 
 @media (max-width: 768px) {
   main .roller .roller-content {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+}
+
+main .browser {
+  background-color: #ffe9a4;
+  padding: 60px 0;
+}
+
+main .browser h2 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+main .browser .browser-content {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+main .browser .browser-content .browser-controls {
+  text-align: center;
+  border: 1px solid #000;
+}
+
+main .browser .browser-content .browser-controls h3 {
+  margin: 10px 0;
+}
+
+main .browser .browser-content .browser-controls p {
+  background-color: #fff;
+  padding: 20px 15px;
+}
+
+main .browser .browser-content .browser-controls button {
+  padding: 5px 15px;
+  border-radius: 5px;
+  font-size: 1rem;
+  margin: 15px 0;
+  background-color: #fff;
+}
+
+main .browser .browser-content .minted-data {
+  border: 1px solid #000;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  main .browser .browser-content {
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
   }

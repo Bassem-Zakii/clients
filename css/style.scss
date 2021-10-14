@@ -1,14 +1,25 @@
 @import "g-style";
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: "Poppins", sans-serif;
 }
 
+section {
+  scroll-margin-top: 47px;
+}
+
 header {
-  min-height: 100vh;
   .logo-menu {
     box-shadow: 0 5px 5px -8px #000;
-    position: relative;
+    background-color: #fff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
     height: 47px;
     .g-container {
       display: flex;
@@ -103,7 +114,7 @@ header {
             }
           }
           ul {
-            position: absolute;
+            position: fixed;
             top: 47px;
             height: calc(100vh - 47px);
             flex-direction: column;
@@ -112,6 +123,8 @@ header {
             align-items: normal;
             min-width: 300px;
             transition: all 0.3s ease-in-out;
+            padding: 10px 0;
+            box-shadow: 4px 4px 8px -6px #000;
             &.active {
               left: 0;
             }
@@ -140,7 +153,8 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: calc(100vh - 47px);
+    min-height: 100vh;
+    padding: 47px 0 10px 0;
     background-color: #0ff;
     color: #000;
   }
@@ -263,6 +277,52 @@ main {
     }
     @media (max-width: 768px) {
       .roller-content {
+        grid-template-columns: 1fr;
+      }
+    }
+  }
+
+  // browser section
+
+  .browser {
+    background-color: #ffe9a4;
+    padding: 60px 0;
+    h2 {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    .browser-content {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+      .browser-controls {
+        text-align: center;
+        border: 1px solid #000;
+        h3 {
+          margin: 10px 0;
+        }
+        p {
+          background-color: #fff;
+          padding: 20px 15px;
+        }
+        button {
+          padding: 5px 15px;
+          border-radius: 5px;
+          font-size: 1rem;
+          margin: 15px 0;
+          background-color: #fff;
+        }
+      }
+      .minted-data {
+        border: 1px solid #000;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+      }
+    }
+    @media (max-width: 768px) {
+      .browser-content {
         grid-template-columns: 1fr;
       }
     }
