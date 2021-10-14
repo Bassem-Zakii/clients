@@ -52,14 +52,19 @@ ul {
   padding: 0;
 }
 
-// img {
-//   width: 100%;
-//   height: auto;
-// }
+img {
+  width: 100%;
+  height: auto;
+}
 
 button {
   cursor: pointer;
   border: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
 }
 
 // end own resat system

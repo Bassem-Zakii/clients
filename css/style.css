@@ -49,9 +49,19 @@ ul {
   padding: 0;
 }
 
+img {
+  width: 100%;
+  height: auto;
+}
+
 button {
   cursor: pointer;
   border: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
 }
 
 body {
@@ -60,11 +70,6 @@ body {
 
 header {
   min-height: 100vh;
-}
-
-header a {
-  text-decoration: none;
-  color: inherit;
 }
 
 header .logo-menu {
@@ -293,6 +298,102 @@ main .mint-divs .divs .mint {
   main .mint-divs .divs {
     -ms-grid-columns: (1fr)[2];
         grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+main .gallery {
+  background-color: #ffc1a4;
+  padding: 60px 0;
+}
+
+main .gallery h2 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+main .gallery .gallery-content ul {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(245px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(245px, 1fr));
+  gap: 20px;
+}
+
+main .gallery .gallery-content ul li img {
+  width: 100%;
+  height: auto;
+}
+
+main .gallery .gallery-content button {
+  display: block;
+  margin: 30px auto 0;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+main .gallery .gallery-content button a {
+  display: block;
+  padding: 10px 20px;
+  font-size: 1rem;
+  background-color: #fff;
+  color: #000;
+}
+
+@media (max-width: 768px) {
+  main .gallery .gallery-content ul {
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+main .roller {
+  background-color: #ff0;
+  padding: 60px 0;
+}
+
+main .roller h2 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+main .roller .roller-content {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(300px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+main .roller .roller-content > div {
+  border: 1px solid #000;
+  padding: 20px 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main .roller .roller-content .random button {
+  background-color: #fff;
+  padding: 5px 10px;
+  font-size: 1rem;
+  border-radius: 5px;
+  margin-top: 30px;
+}
+
+@media (max-width: 768px) {
+  main .roller .roller-content {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
   }
 }
 
