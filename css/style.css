@@ -180,7 +180,7 @@ body {
 }
 
 .chat .chat-wrapper .chat-box .chat-content::-webkit-scrollbar {
-  width: 1vw;
+  width: 0.6vw;
   height: 1vh;
 }
 
@@ -271,6 +271,7 @@ body {
           transform: translateY(-50%);
   background-size: 40px 40px;
   padding: 1px;
+  cursor: auto;
 }
 
 .chat .chat-wrapper .chat-box .open-online-user img {
@@ -328,7 +329,7 @@ body {
 }
 
 .chat .chat-wrapper .online-chat ul::-webkit-scrollbar {
-  width: 1vw;
+  width: 0.6vw;
   height: 1vh;
 }
 
