@@ -21,7 +21,23 @@ body {
       display: flex;
       align-items: center;
       justify-content: center;
-      padding: 40px 10px;
+      padding: 60px 10px 40px;
+      .greeting {
+        border: 2px solid #ccc;
+        min-width: 500px;
+        padding: 10px 15px;
+        h3 {
+          color: #fff;
+          font-size: 1.5rem;
+          letter-spacing: 2px;
+          &:first-child {
+            text-align: left;
+          }
+          &:last-child {
+            text-align: right;
+          }
+        }
+      }
     }
     .chat-option {
       grid-column: 1/2;
@@ -33,18 +49,11 @@ body {
         li {
           margin-bottom: 15px;
           button {
-            color: #fff;
-            font-size: 1rem;
-            display: block;
-            background-color: #5b4332;
-            border-radius: 5px;
-            width: 100%;
-            padding: 14px 19px;
-            border: 5px outset #b38e72;
             transition: all 0.2s ease-in-out;
-            box-shadow: 0 7px 7px -4px #5b4332;
-            &:hover {
-              box-shadow: none;
+            height: 70px;
+            width: 90px;
+            img {
+              height: 100%;
             }
           }
         }
@@ -287,16 +296,12 @@ body {
       grid-template-rows: repeat(4, auto);
       .chat-head {
         grid-column: 1/2;
+        .greeting {
+          min-width: 100%;
+        }
       }
       .chat-option {
         grid-column: 1/2;
-        ul {
-          li {
-            button {
-              padding: 8px 12px;
-            }
-          }
-        }
       }
       .chat-box {
         grid-column: 1/2;
