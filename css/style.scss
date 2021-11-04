@@ -15,13 +15,17 @@ body {
     display: grid;
     grid-template-columns: 190px auto 260px;
     grid-template-rows: auto auto auto;
+    align-content: start;
+
+    // head chat page
+
     .chat-head {
       grid-column: 1/4;
       grid-row: 1/2;
       display: flex;
       align-items: center;
       justify-content: center;
-      padding: 60px 10px 40px;
+      padding: 40px 10px 40px;
       .greeting {
         border: 2px solid #ccc;
         min-width: 500px;
@@ -39,6 +43,9 @@ body {
         }
       }
     }
+
+    // chat buttons
+
     .chat-option {
       grid-column: 1/2;
       grid-row: 2/4;
@@ -59,6 +66,9 @@ body {
         }
       }
     }
+
+    // chat box
+
     .chat-box {
       grid-column: 2/3;
       grid-row: 2/4;
@@ -169,6 +179,9 @@ body {
         }
       }
     }
+
+    // online chat
+
     .online-chat {
       grid-column: 3/4;
       grid-row: 2/3;
@@ -180,8 +193,9 @@ body {
       height: 500px;
       .online-title {
         position: relative;
-        padding: 0 5px 5px;
+        padding: 0 5px 7px;
         text-align: center;
+        margin-top: -3px;
         &::before {
           content: "";
           position: absolute;
@@ -235,21 +249,20 @@ body {
         }
       }
     }
+
+    // send message buttons
+
     .send-message {
       grid-column: 3/4;
       grid-row: 3/4;
-      margin-top: 10px;
+      padding: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
       button {
-        padding: 12px 25px;
-        width: 49%;
-        background-color: #5b4332;
-        border: 5px outset #b38e72;
-        transition: all 0.2s ease-in-out;
-        box-shadow: 0 7px 7px -4px #5b4332;
-        color: #fff;
-        font-size: 1rem;
-        &:hover {
-          box-shadow: none;
+        height: 50px;
+        img {
+          height: 100%;
         }
       }
     }
@@ -257,10 +270,17 @@ body {
   @media (max-width: 992px) {
     .chat-wrapper {
       grid-template-columns: auto auto;
-      grid-template-rows: repeat(4, auto);
+      grid-template-rows: auto auto auto auto;
+
+      // head chat page
+
       .chat-head {
         grid-column: 1/3;
+        padding: 50px 10px 30px;
       }
+
+      // chat buttons
+
       .chat-option {
         grid-column: 1/3;
         grid-row: 2/3;
@@ -276,17 +296,34 @@ body {
           }
         }
       }
+
+      // chat box
+
       .chat-box {
         grid-column: 1/2;
-        grid-row: 3/4;
+        grid-row: 3/5;
+        .chat-content {
+          padding: 15px 8px 20px;
+        }
       }
+
+      // online chat list
+
       .online-chat {
         grid-column: 2/3;
         grid-row: 3/4;
       }
+
+      // send message buttons
+
       .send-message {
-        grid-column: 1/2;
+        grid-column: 2/3;
         grid-row: 4/5;
+
+        justify-content: flex-start;
+        button {
+          margin: 0 5px;
+        }
       }
     }
   }
@@ -294,15 +331,29 @@ body {
     .chat-wrapper {
       grid-template-columns: auto;
       grid-template-rows: repeat(4, auto);
+
+      // head chat page
+
       .chat-head {
         grid-column: 1/2;
+        padding: 25px 10px 20px;
         .greeting {
           min-width: 100%;
+          padding: 8px 12px;
+          h3 {
+            font-size: 1.2rem;
+          }
         }
       }
+
+      // chat buttons
+
       .chat-option {
         grid-column: 1/2;
       }
+
+      // chat box
+
       .chat-box {
         grid-column: 1/2;
         grid-row: 3/4;
@@ -312,6 +363,9 @@ body {
             width: calc(100% - 50px);
           }
         }
+
+        // open button to open online chat list
+
         .open-online-user {
           outline: 2px solid #00fd00;
           outline-offset: -2px;
@@ -339,6 +393,9 @@ body {
           }
         }
       }
+
+      // online chat list
+
       .online-chat {
         grid-column: 1/2;
         grid-row: 3/4;
@@ -356,149 +413,16 @@ body {
           left: 0;
         }
       }
-    }
-  }
-}
 
-// sign in page
+      // send message buttons
 
-.sign-in {
-  background-color: #555;
-  padding: 0 0 60px;
-  .sign-in-wrapper {
-    min-height: 100vh;
-    .sign-in-head {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 35px 10px;
-      color: rgb(0, 133, 29);
-      h3 {
-        border: 3px solid #ccc;
-        padding: 15px 50px;
-        font-size: 1.5rem;
-      }
-    }
-    .sign-box {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      .matching {
-        border: 15px solid transparent;
-        border-image: url("../img/border.png") 33% round;
-        background-color: #000;
-        .matching-title {
-          color: #fff;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          font-size: 1.2rem;
-          border-image: url("../img/border.png") 33% round;
-          border-bottom: 15px solid transparent;
-          padding: 5px 6px;
+      .send-message {
+        grid-column: 1/2;
+        grid-row: 4/5;
+        justify-content: center;
+        button {
+          margin: 0 5px;
         }
-        .matching-content {
-          padding: 60px 15px;
-        }
-      }
-      .sign-in-box {
-        border: 15px solid transparent;
-        border-image: url("../img/border.png") 33% round;
-        background-color: #000;
-        color: #fff;
-        padding: 20px 15px;
-        position: relative;
-        z-index: 0;
-        // clip-path: polygon(
-        //   50% 0%,
-        //   100% 0,
-        //   100% 79%,
-        //   66% 79%,
-        //   66% 100%,
-        //   32% 100%,
-        //   0 100%,
-        //   0 43%,
-        //   0 0
-        // );
-        // &::after {
-        //   content: '';
-        //   border-bottom: 15px solid transparent;
-        //   border-right: 15px solid transparent;
-        //   border-image: url("../img/border.png") 33% round;
-        //   position: absolute;
-        //   width: 70%;
-        //   left: 0;
-        //   bottom: 0;
-        // }
-        &::before {
-          content: "";
-          position: absolute;
-          top: 0;
-          left: 0;
-          right: 0;
-          bottom: 0;
-          z-index: -1;
-          background-color: #000;
-          clip-path: polygon(
-            50% 0%,
-            100% 0,
-            100% 79%,
-            66% 79%,
-            66% 100%,
-            32% 100%,
-            0 100%,
-            0 43%,
-            0 0
-          );
-        }
-        h3 {
-          text-align: center;
-          color: #e9f26a;
-          margin-bottom: 20px;
-          font: 1.2rem;
-        }
-        form {
-          display: flex;
-          flex-direction: column;
-          margin-top: 20px;
-          ul {
-            li {
-              margin-bottom: 15px;
-              display: flex;
-              flex-direction: column;
-              align-items: flex-start;
-              label {
-                margin-bottom: 6px;
-                font-size: 0.9rem;
-              }
-              input {
-                padding: 5px 8px;
-                border: 2px solid #a19a88;
-                background-color: #000;
-                color: #fff;
-                width: 55%;
-              }
-            }
-          }
-          .ok-cancel {
-            position: absolute;
-            right: -14px;
-            bottom: -14px;
-            padding: 15px;
-            border-top: 15px solid transparent;
-            border-left: 15px solid transparent;
-            border-image: url("../img/border.png") 33% round;
-            background-color: #000;
-            z-index: 500;
-            button {
-              padding: 6px 18px;
-            }
-          }
-        }
-      }
-    }
-    @media only screen and (max-width: 768px) {
-      .sign-box {
-        grid-template-columns: 1fr;
       }
     }
   }
