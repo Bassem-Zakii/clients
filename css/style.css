@@ -767,6 +767,7 @@ body {
 
 .login-page .login-wrapper .login-box .login-form form button {
   margin: 8px auto;
+  background-color: transparent;
 }
 
 .login-page .login-wrapper .login-box .login-form form button img {
