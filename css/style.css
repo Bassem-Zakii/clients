@@ -1,0 +1,332 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  outline: none;
+}
+
+.g-container {
+  width: 100%;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  padding-left: 15px !important;
+  padding-right: 15px !important;
+}
+
+@media (min-width: 576px) {
+  .g-container {
+    max-width: 540px;
+  }
+}
+
+@media (min-width: 768px) {
+  .g-container {
+    max-width: 720px;
+  }
+}
+
+@media (min-width: 992px) {
+  .g-container {
+    max-width: 960px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .g-container {
+    max-width: 1140px;
+  }
+}
+
+@media (min-width: 1400px) {
+  .g-container {
+    max-width: 1320px;
+  }
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+button {
+  cursor: pointer;
+  border: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #fff;
+  min-height: 100vh;
+}
+
+aside {
+  padding: 10px;
+  background-color: #008bbc;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: auto 1fr auto;
+      grid-template-rows: auto 1fr auto;
+  gap: 5px;
+  color: #fff;
+  height: 100vh;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  max-width: 65px;
+  overflow: hidden;
+}
+
+aside:hover {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  max-width: 250px;
+}
+
+aside:hover nav {
+  padding-right: 8px;
+  overflow-x: hidden;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: #00516d #9ae5ff;
+}
+
+aside:hover nav::-webkit-scrollbar {
+  width: 8px;
+}
+
+aside:hover nav::-webkit-scrollbar-track {
+  background: #9ae5ff;
+}
+
+aside:hover nav::-webkit-scrollbar-thumb {
+  background-color: #00516d;
+  border: 3px solid #00516d;
+}
+
+aside:hover nav ul li a {
+  padding: 6px 18px 6px 10px;
+}
+
+aside:hover nav ul li a span {
+  margin-left: 10px;
+  display: block;
+}
+
+aside:hover .more-info ul li a {
+  padding: 6px 18px 6px 10px;
+}
+
+aside:hover .more-info ul li a span {
+  margin-left: 10px;
+  display: block;
+}
+
+aside .header-sidebar .logo-sidebar {
+  margin: 10px 5px 15px;
+}
+
+aside .header-sidebar .logo-sidebar i {
+  font-size: 2rem;
+  display: block;
+}
+
+aside .header-sidebar .sidebar-btn {
+  display: none;
+}
+
+aside nav {
+  overflow: hidden;
+  padding: 5px 0;
+}
+
+aside nav ul li a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 6px 10px;
+  border-radius: 8px;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+aside nav ul li a.active {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+aside nav ul li a:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+aside nav ul li a .icon-sidebar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+aside nav ul li a .icon-sidebar i {
+  font-size: 22px;
+}
+
+aside nav ul li a span {
+  margin-left: 10px;
+  display: none;
+  white-space: nowrap;
+}
+
+aside .more-info {
+  margin-top: 20px;
+  border-top: 1px solid #ccc;
+  padding-top: 10px;
+}
+
+aside .more-info ul li a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 6px 10px;
+  border-radius: 8px;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+aside .more-info ul li a .icon-sidebar i {
+  font-size: 22px;
+}
+
+aside .more-info ul li a .icon-sidebar img {
+  display: block;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 22px;
+  height: 22px;
+  border-radius: 60px;
+}
+
+aside .more-info ul li a span {
+  margin-left: 10px;
+  display: none;
+  white-space: nowrap;
+}
+
+aside .more-info ul li a.active {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+aside .more-info ul li a:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 768px) {
+  aside {
+    min-width: 100%;
+    overflow: hidden;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    height: 48px;
+    padding: 4px 10px;
+  }
+  aside .header-sidebar {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    height: 40px;
+  }
+  aside .header-sidebar .logo-sidebar {
+    margin: 0 5px;
+  }
+  aside .header-sidebar .sidebar-btn {
+    margin: 0 5px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    background-color: transparent;
+    border: 0;
+    outline: none;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: end;
+    cursor: pointer;
+  }
+  aside .header-sidebar .sidebar-btn span {
+    display: block;
+    background-color: #fff;
+    width: 24px;
+    height: 3px;
+    margin: 3px 0;
+    border-radius: 10px;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+  }
+  aside .header-sidebar .sidebar-btn span:nth-child(2) {
+    width: 18px;
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+  }
+  aside .header-sidebar .sidebar-btn.active {
+    height: 27px;
+  }
+  aside .header-sidebar .sidebar-btn.active span {
+    background-color: #a51313;
+    margin: -2px auto;
+    border-radius: 10px;
+  }
+  aside .header-sidebar .sidebar-btn.active span:first-child {
+    -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+  }
+  aside .header-sidebar .sidebar-btn.active span:nth-child(2) {
+    display: none;
+  }
+  aside .header-sidebar .sidebar-btn.active span:last-child {
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+  }
+  aside nav ul li a span {
+    display: block;
+  }
+  aside .more-info ul li a span {
+    display: block;
+  }
+  aside.active {
+    height: 100vh;
+  }
+}
+/*# sourceMappingURL=style.css.map */

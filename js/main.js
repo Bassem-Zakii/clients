@@ -1,21 +1,23 @@
 "use strict";
 
-const openOnlineList = document.querySelector(".open-online-user");
-const onlineList = document.querySelector(".online-chat");
+// navbar active links
 
-openOnlineList.addEventListener("click", () => {
-  openOnlineList.classList.toggle("active");
-  onlineList.classList.toggle("active");
+const navLinks = document.querySelectorAll("aside nav ul a");
+const navBtn = document.querySelector("aside .sidebar-btn");
+const navList = document.querySelector("aside");
+
+navLinks.forEach((links) => {
+  links.addEventListener("click", function () {
+    navLinks.forEach((link) => link.classList.remove("active"));
+    this.classList.add("active");
+  });
 });
 
-// CLoseing online list by click outside
-
-const html = document.querySelector("html");
-
-html.addEventListener("click", function (e) {
-  const removeOnlineList = e.target.closest(".open-online-user");
-  if (!removeOnlineList && e.target !== onlineList) {
-    openOnlineList.classList.remove("active");
-    onlineList.classList.remove("active");
+navBtn.addEventListener("click", () => {
+  navBtn.classList.toggle("active");
+  if (navBtn.classList.contains("active")) {
+    navList.classList.add("active");
+  } else {
+    navList.classList.remove("active");
   }
 });
